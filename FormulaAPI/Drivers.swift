@@ -8,50 +8,22 @@
 import Alamofire
 import CodableAlamofire
 
-public enum FormulaType {
-    case f1, fe
-    
-    var parameter: String {
-        get {
-            return self == .f1 ? "f1" : "fe"
-        }
-    }
-}
-
-public typealias DriverListTask = ([Driver]) -> ()
+public typealias DriversCompletionBlock = (DataResponse<[Driver]>) -> ()
 
 extension FormulaAPI {
     
-    public static func fetchDrivers(type: FormulaType, year: Int? = nil, pageSize: Int = 10, offset: Int = 0, completion: @escaping DriverListTask) {
+    public static func fetchDrivers(type: FormulaType, year: Int? = nil, pageSize: Int = 10, offset: Int = 0, completion: @escaping DriversCompletionBlock) {
         
         let parameters: Parameters = [
             "limit" : pageSize,
             "offset" : offset
         ]
         
-        let path = buildDriversUrl(type: type, year: year)
+        let path = buildAPIprefix(type: type, year: year) + "drivers.json"
         
-        Alamofire.request(path, parameters: parameters).responseDecodableObject { (response: DataResponse<DriversData>) in
-   
-            switch response.result {
-            case .success(let data):
-                completion(data.mrData.driverTable.drivers)
-            case .failure(let err):
-                print(err)
-            }
-        }
-    }
-    
-    private static func buildDriversUrl(type: FormulaType, year: Int?) -> String {
-        var path: String = "\(FormulaAPI.basePath)\(type.parameter)/"
+        Alamofire.request(path, parameters: parameters)
+            .responseDecodableObject(keyPath: "MRData.DriverTable.Drivers", decoder: JSONDecoder(), completionHandler: completion)
         
-        if let year = year {
-            path = path + "\(year)/"
-        }
-        
-        path = path + "drivers.json"
-        
-        return path
     }
 }
 

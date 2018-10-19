@@ -6,9 +6,9 @@ target 'FormulaAPI' do
   use_frameworks!
 
   # Pods for FormulaAPI
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.7'
   pod 'CodableAlamofire'
-
+  
   target 'FormulaAPI Unit Tests' do
     inherit! :search_paths
     # Pods for testing

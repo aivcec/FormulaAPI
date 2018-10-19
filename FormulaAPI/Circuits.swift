@@ -8,25 +8,16 @@
 import Alamofire
 import CodableAlamofire
 
+public typealias CircuitsCompletionBlock = (DataResponse<[Circuit]>) -> ()
+
 extension FormulaAPI {
     
-    public static func fetchDriverCircuits(driverId: String, type: FormulaType, year: Int? = nil) {
+    public static func fetchDriverCircuits(driverId: String, type: FormulaType, year: Int? = nil, completion: @escaping CircuitsCompletionBlock) {
         
-        let path = buildCircuitsPath(driverId: driverId, type: type, year: year)
-        print(path)
-        Alamofire.request(path).responseJSON{ response in
-            print(response)
-        }
-    }
-    
-    private static func buildCircuitsPath(driverId: String, type: FormulaType, year: Int?) -> String {
-        let yearPath: String
-        if let year = year {
-            yearPath = "\(year)/"
-        } else {
-            yearPath = ""
-        }
+        let path = buildAPIprefix(type: type, year: year) + "drivers/\(driverId)/circuits.json"
         
-        return "\(FormulaAPI.basePath)\(type.parameter)/\(yearPath)drivers/\(driverId)/circuits.json"
+        Alamofire.request(path).responseDecodableObject(keyPath: "MRData.CircuitTable.Circuits", decoder: JSONDecoder(), completionHandler: { (response: DataResponse<[Circuit]>) in
+            completion(response)
+        })
     }
 }
