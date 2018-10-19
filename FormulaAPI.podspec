@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :path => '.' }
 
-  s.source_files  = "FormulaAPI"
+  s.source_files  = "FormulaAPI/**/*.{h,m,swift}"
   s.exclude_files = "Classes/Exclude"
   
   s.swift_version = "4.2"   
