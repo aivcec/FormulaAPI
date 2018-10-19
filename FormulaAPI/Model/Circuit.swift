@@ -6,8 +6,8 @@
 //
 
 public struct Circuit: Codable {
-    let id: String
-    let circuitName: String
+    public let id: String
+    public let circuitName: String
     
     enum CodingKeys: String, CodingKey {
         case id = "circuitId"

@@ -6,8 +6,8 @@
 //
 
 public struct Constructor: Codable {
-    let id: String
-    let name, nationality: String
+    public let id: String
+    public let name, nationality: String
     
     enum CodingKeys: String, CodingKey {
         case id = "constructorId"
