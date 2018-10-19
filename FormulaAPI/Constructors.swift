@@ -12,11 +12,11 @@ public typealias ConstructorsCompletionBlock = (DataResponse<[Constructor]>) -> 
 
 extension FormulaAPI {
     
-    public static func fetchDriverConstructors(driverId: String, type: FormulaType, year: Int? = nil, completion: @escaping CircuitsCompletionBlock) {
+    public static func fetchDriverConstructors(driverId: String, type: FormulaType, year: Int? = nil, completion: @escaping ConstructorsCompletionBlock) {
         
-        let path = buildAPIprefix(type: type, year: year) + "drivers/\(driverId)/circuits.json"
-        
-        Alamofire.request(path).responseDecodableObject(keyPath: "MRData.ConstructorTable.Constructors", decoder: JSONDecoder(), completionHandler: { (response: DataResponse<[Circuit]>) in
+        let path = buildAPIprefix(type: type, year: year) + "drivers/\(driverId)/constructors.json"
+                
+        Alamofire.request(path).responseDecodableObject(keyPath: "MRData.ConstructorTable.Constructors", decoder: JSONDecoder(), completionHandler: { (response: DataResponse<[Constructor]>) in
             completion(response)
         })
     }
