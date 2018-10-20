@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.description  = "Neat little API."
 
-  s.homepage     = "http://EXAMPLE/FormulaAPI"
+  s.homepage     = "https://bitbucket.org/aivcec/frameworkproject/src"
 
   s.license      = "CopyLeft"
 
@@ -28,5 +28,6 @@ Pod::Spec.new do |s|
   s.swift_version = "4.2"   
   s.dependency 'Alamofire'
   s.dependency 'CodableAlamofire'
+  s.dependency 'RxAlamofire'
 
 end

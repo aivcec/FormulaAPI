@@ -8,6 +8,7 @@ target 'FormulaAPI' do
   # Pods for FormulaAPI
   pod 'Alamofire', '~> 4.7'
   pod 'CodableAlamofire'
+  pod 'RxAlamofire'
   
   target 'FormulaAPI Unit Tests' do
     inherit! :search_paths
