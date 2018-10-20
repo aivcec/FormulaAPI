@@ -17,6 +17,7 @@
 		03EE2E72217752C400E73F23 /* FormulaAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EE2E70217752C400E73F23 /* FormulaAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03EE2E7F217752E200E73F23 /* FormulaAPI_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EE2E7E217752E200E73F23 /* FormulaAPI_Unit_Tests.swift */; };
 		03EE2E81217752E200E73F23 /* FormulaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EE2E6D217752C400E73F23 /* FormulaAPI.framework */; };
+		03F5D10A217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5D109217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift */; };
 		26ACA329B92304FA9927ACCF /* Pods_FormulaAPI_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22960A7B173A380A74CBB32E /* Pods_FormulaAPI_Unit_Tests.framework */; };
 		C2376F7D2AD869F2DFC1458F /* Pods_FormulaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B33106C5D59C81F94F49203 /* Pods_FormulaAPI.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		03EE2E7C217752E200E73F23 /* FormulaAPI Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FormulaAPI Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EE2E7E217752E200E73F23 /* FormulaAPI_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaAPI_Unit_Tests.swift; sourceTree = "<group>"; };
 		03EE2E80217752E200E73F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03F5D109217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+KeyPath.swift"; sourceTree = "<group>"; };
 		049E2282E50069F70276E7F6 /* Pods-FormulaAPI Unit Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaAPI Unit Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaAPI Unit Tests/Pods-FormulaAPI Unit Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		22960A7B173A380A74CBB32E /* Pods_FormulaAPI_Unit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormulaAPI_Unit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5993338049DF3B764F3A9AAE /* Pods-FormulaAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaAPI/Pods-FormulaAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				039AE3AC2179CAB200268B95 /* Constructors.swift */,
 				039AE3AB2179CAB200268B95 /* FormulaAPI.swift */,
 				03C3A8B4217886E900B083A7 /* Drivers.swift */,
+				03F5D109217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift */,
 				03EE2E70217752C400E73F23 /* FormulaAPI.h */,
 				03EE2E71217752C400E73F23 /* Info.plist */,
 			);
@@ -310,6 +313,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FormulaAPI Unit Tests/Pods-FormulaAPI Unit Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -317,6 +322,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -335,6 +342,7 @@
 				03C3A8B6217886EA00B083A7 /* Drivers.swift in Sources */,
 				039AE3B12179CAB200268B95 /* Circuits.swift in Sources */,
 				039AE3B52179CAB200268B95 /* Circuit.swift in Sources */,
+				03F5D10A217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift in Sources */,
 				039AE3B32179CAB200268B95 /* Constructors.swift in Sources */,
 				039AE3B22179CAB200268B95 /* FormulaAPI.swift in Sources */,
 			);
