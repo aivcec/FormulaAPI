@@ -6,6 +6,8 @@
 //  Copyright © 2018 Antonio Ivcec. All rights reserved.
 //
 
+// credit: https://github.com/0111b/JSONDecoder-Keypath
+
 public extension JSONDecoder {
     
     /// Decode value at the keypath of the given type from the given JSON representation
