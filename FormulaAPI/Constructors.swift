@@ -7,10 +7,22 @@
 
 import Alamofire
 import CodableAlamofire
+import RxAlamofire
+import RxSwift
 
 public typealias ConstructorsCompletionBlock = (DataResponse<[Constructor]>) -> ()
 
 extension FormulaAPI {
+    
+    public static func driverConstructorsObs(driverId: String) -> Observable<[Constructor]> {
+        let circuitsPath = buildAPIprefix(type: .fe, year: nil) + "drivers/\(driverId)/constructors.json"
+        
+        
+        return RxAlamofire.requestData(.get, circuitsPath).map { resultPair in
+            let constructors = try! JSONDecoder().decode([Constructor].self, from: resultPair.1, keyPath: "MRData.ConstructorTable.Constructors")
+            return constructors
+        }
+    }
     
     public static func fetchDriverConstructors(driverId: String, type: FormulaType, year: Int? = nil, completion: @escaping ConstructorsCompletionBlock) {
         
