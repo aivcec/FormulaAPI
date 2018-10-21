@@ -31,7 +31,7 @@ extension FormulaAPI {
         
         let path = buildAPIprefix(type: type, year: year) + "drivers/\(driverId)/constructors.json"
                 
-        Alamofire.request(path).responseDecodableObject(keyPath: "MRData.ConstructorTable.Constructors", decoder: JSONDecoder(), completionHandler: { (response: DataResponse<[Constructor]>) in
+        Alamofire.request(path).responseDecodableObject(keyPath: KeyPaths.constructorsKeyPath, decoder: JSONDecoder(), completionHandler: { (response: DataResponse<[Constructor]>) in
             completion(response)
         })
     }
