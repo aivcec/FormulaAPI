@@ -1,18 +1,26 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
-target 'FormulaAPI' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for FormulaAPI
+def app_pods
   pod 'Alamofire', '~> 4.7'
   pod 'CodableAlamofire'
   pod 'RxAlamofire'
+end
+
+def testing_pods
+  pod 'OHHTTPStubs', '~> 6.0'
+  pod 'OHHTTPStubs/Swift'
+end
+
+target 'FormulaAPI' do
+  use_frameworks!
+
+  # Pods for FormulaAPI
+    app_pods
+
   
   target 'FormulaAPI Unit Tests' do
     inherit! :search_paths
-    # Pods for testing
+    testing_pods
   end
 
 end
