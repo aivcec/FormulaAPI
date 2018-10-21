@@ -19,8 +19,11 @@ extension FormulaAPI {
         
         
         return RxAlamofire.requestData(.get, circuitsPath).map { resultPair in
-            let constructors = try! JSONDecoder().decode([Constructor].self, from: resultPair.1, keyPath: "MRData.ConstructorTable.Constructors")
-            return constructors
+            if let constructors = try? JSONDecoder().decode([Constructor].self, from: resultPair.1, keyPath: KeyPaths.constructorsKeyPath) {
+                return constructors
+            }
+            
+            return []
         }
     }
     

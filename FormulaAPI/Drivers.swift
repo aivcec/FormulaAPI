@@ -23,8 +23,11 @@ extension FormulaAPI {
         let path = buildAPIprefix(type: type, year: year) + "drivers.json"
         
         return RxAlamofire.requestData(.get, path, parameters: parameters).map { resultPair in
-            let drivers = try! JSONDecoder().decode([Driver].self, from: resultPair.1, keyPath: "MRData.DriverTable.Drivers")
-            return drivers
+            if let drivers = try? JSONDecoder().decode([Driver].self, from: resultPair.1, keyPath: KeyPaths.driversKeyPath) {
+                return drivers
+            }
+            
+            return []
         }
     }
     

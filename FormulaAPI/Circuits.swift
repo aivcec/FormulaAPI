@@ -19,8 +19,11 @@ extension FormulaAPI {
 
         
         return RxAlamofire.requestData(.get, circuitsPath).map { resultPair in
-            let circuits = try! JSONDecoder().decode([Circuit].self, from: resultPair.1, keyPath: "MRData.CircuitTable.Circuits")
-            return circuits
+            if let circuits = try? JSONDecoder().decode([Circuit].self, from: resultPair.1, keyPath: KeyPaths.circuitsKeyPath) {
+                return circuits
+            }
+            
+            return []
         }
     }
     
