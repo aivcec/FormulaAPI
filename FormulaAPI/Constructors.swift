@@ -14,9 +14,8 @@ public typealias ConstructorsCompletionBlock = (DataResponse<[Constructor]>) -> 
 
 extension FormulaAPI {
     
-    public static func driverConstructorsObs(driverId: String) -> Observable<[Constructor]> {
-        let circuitsPath = buildAPIprefix(type: .fe, year: nil) + "drivers/\(driverId)/constructors.json"
-        
+    public static func driverConstructorsObs(driverId: String, type: FormulaType, year: Int? = nil) -> Observable<[Constructor]> {
+        let circuitsPath = buildAPIprefix(type: type, year: year) + "drivers/\(driverId)/constructors.json"
         
         return RxAlamofire.requestData(.get, circuitsPath).map { resultPair in
             if let constructors = try? JSONDecoder().decode([Constructor].self, from: resultPair.1, keyPath: KeyPaths.constructorsKeyPath) {
