@@ -43,7 +43,7 @@ class DriversTests: XCTestCase {
             case .success(_):
                 exp.fulfill()
             case .failure(let err):
-                XCTFail("Failed to load f1 drivers, - \(err.localizedDescription)")
+                XCTFail("Failed to load f1 drivers - \(err.localizedDescription)")
             }
         }
         waitForExpectations(timeout: 2, handler: nil)
@@ -59,7 +59,7 @@ class DriversTests: XCTestCase {
                     exp.fulfill()
                 }
             case .failure(let err):
-                XCTFail("Failed to load f1 drivers, - \(err.localizedDescription)")
+                XCTFail("Failed to load driver page of size 1 - \(err.localizedDescription)")
             }
         }
         waitForExpectations(timeout: 3, handler: nil)
@@ -77,7 +77,7 @@ class DriversTests: XCTestCase {
             case .success(let drivers):
                 exp.fulfill()
             case .failure(let err):
-                XCTFail("Failed to map driver, - \(err.localizedDescription)")
+                XCTFail("Failed to map driver - \(err.localizedDescription)")
             }
         }
         
@@ -91,7 +91,7 @@ class DriversTests: XCTestCase {
         FormulaAPI.driversObs(type: .f1).subscribe(onNext: { _ in
             exp.fulfill()
         }, onError: { err in
-            XCTFail("Failed to fetch drivers, - \(err.localizedDescription)")
+            XCTFail("Failed to fetch drivers - \(err.localizedDescription)")
         }).disposed(by: bag)
         
         waitForExpectations(timeout: 3, handler: nil)
