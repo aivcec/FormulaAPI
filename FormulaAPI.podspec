@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.description  = "Neat little API."
 
-  s.homepage     = "https://bitbucket.org/aivcec/frameworkproject/src"
+  s.homepage     = "https://github.com/aivcec/FormulaAPI"
 
   s.license      = "CopyLeft"
 
