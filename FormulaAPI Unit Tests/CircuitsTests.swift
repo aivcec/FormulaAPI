@@ -21,7 +21,7 @@ class CircuitsTests: XCTestCase {
         return try! Data(contentsOf: URL(fileURLWithPath: bundle.path(forResource: "mockResponse", ofType: "json")!))
     }()
     
-    func testCanFetchAndMapFEConstructors() {
+    func testCanFetchAndMapFECircuits() {
         let exp = expectation(description: "Successfully received and mapped circuits.")
         
         FormulaAPI.fetchDriverCircuits(driverId: "abt", type: .fe) { response in
