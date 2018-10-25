@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034E3218217BA774004B6EA3 /* mockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 034E3217217BA774004B6EA3 /* mockResponse.json */; };
 		039AE3B12179CAB200268B95 /* Circuits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039AE3AA2179CAB200268B95 /* Circuits.swift */; };
 		039AE3B22179CAB200268B95 /* FormulaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039AE3AB2179CAB200268B95 /* FormulaAPI.swift */; };
 		039AE3B32179CAB200268B95 /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039AE3AC2179CAB200268B95 /* Constructors.swift */; };
 		039AE3B42179CAB200268B95 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039AE3AE2179CAB200268B95 /* Constructor.swift */; };
 		039AE3B52179CAB200268B95 /* Circuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039AE3AF2179CAB200268B95 /* Circuit.swift */; };
 		039AE3B62179CAB200268B95 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039AE3B02179CAB200268B95 /* Driver.swift */; };
+		039B03C8217CD90500DB0364 /* DriversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03C7217CD90500DB0364 /* DriversTests.swift */; };
+		039B03CA217CDACB00DB0364 /* ConstructorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03C9217CDACB00DB0364 /* ConstructorsTests.swift */; };
+		039B03CC217CDCD600DB0364 /* CircuitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03CB217CDCD600DB0364 /* CircuitsTests.swift */; };
 		03C3A8B6217886EA00B083A7 /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3A8B4217886E900B083A7 /* Drivers.swift */; };
 		03EE2E72217752C400E73F23 /* FormulaAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EE2E70217752C400E73F23 /* FormulaAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03EE2E7F217752E200E73F23 /* FormulaAPI_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EE2E7E217752E200E73F23 /* FormulaAPI_Unit_Tests.swift */; };
 		03EE2E81217752E200E73F23 /* FormulaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EE2E6D217752C400E73F23 /* FormulaAPI.framework */; };
 		03F5D10A217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5D109217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift */; };
 		26ACA329B92304FA9927ACCF /* Pods_FormulaAPI_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22960A7B173A380A74CBB32E /* Pods_FormulaAPI_Unit_Tests.framework */; };
@@ -33,20 +36,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		034E3217217BA774004B6EA3 /* mockResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockResponse.json; sourceTree = "<group>"; };
 		039AE3AA2179CAB200268B95 /* Circuits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circuits.swift; sourceTree = "<group>"; };
 		039AE3AB2179CAB200268B95 /* FormulaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaAPI.swift; sourceTree = "<group>"; };
 		039AE3AC2179CAB200268B95 /* Constructors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constructors.swift; sourceTree = "<group>"; };
 		039AE3AE2179CAB200268B95 /* Constructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
 		039AE3AF2179CAB200268B95 /* Circuit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circuit.swift; sourceTree = "<group>"; };
 		039AE3B02179CAB200268B95 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		039B03C7217CD90500DB0364 /* DriversTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversTests.swift; sourceTree = "<group>"; };
+		039B03C9217CDACB00DB0364 /* ConstructorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorsTests.swift; sourceTree = "<group>"; };
+		039B03CB217CDCD600DB0364 /* CircuitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsTests.swift; sourceTree = "<group>"; };
 		03C3A8B4217886E900B083A7 /* Drivers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
 		03EE2E6D217752C400E73F23 /* FormulaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormulaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EE2E70217752C400E73F23 /* FormulaAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormulaAPI.h; sourceTree = "<group>"; };
 		03EE2E71217752C400E73F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03EE2E7C217752E200E73F23 /* FormulaAPI Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FormulaAPI Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		03EE2E7E217752E200E73F23 /* FormulaAPI_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaAPI_Unit_Tests.swift; sourceTree = "<group>"; };
 		03EE2E80217752E200E73F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F5D109217B7DA8005D4A73 /* JSONDecoder+KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+KeyPath.swift"; sourceTree = "<group>"; };
+		03F9FDC8217B94810048BB84 /* Pods-FormulaAPI Unit Tests-frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "Pods-FormulaAPI Unit Tests-frameworks.sh"; path = "Pods/Target Support Files/Pods-FormulaAPI Unit Tests/Pods-FormulaAPI Unit Tests-frameworks.sh"; sourceTree = "<group>"; };
 		049E2282E50069F70276E7F6 /* Pods-FormulaAPI Unit Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaAPI Unit Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaAPI Unit Tests/Pods-FormulaAPI Unit Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		22960A7B173A380A74CBB32E /* Pods_FormulaAPI_Unit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormulaAPI_Unit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5993338049DF3B764F3A9AAE /* Pods-FormulaAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaAPI/Pods-FormulaAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +131,10 @@
 		03EE2E7D217752E200E73F23 /* FormulaAPI Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				03EE2E7E217752E200E73F23 /* FormulaAPI_Unit_Tests.swift */,
+				034E3217217BA774004B6EA3 /* mockResponse.json */,
+				039B03C7217CD90500DB0364 /* DriversTests.swift */,
+				039B03C9217CDACB00DB0364 /* ConstructorsTests.swift */,
+				039B03CB217CDCD600DB0364 /* CircuitsTests.swift */,
 				03EE2E80217752E200E73F23 /* Info.plist */,
 			);
 			path = "FormulaAPI Unit Tests";
@@ -144,6 +154,7 @@
 		B5D49344A6D5C04E0240B316 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03F9FDC8217B94810048BB84 /* Pods-FormulaAPI Unit Tests-frameworks.sh */,
 				8B33106C5D59C81F94F49203 /* Pods_FormulaAPI.framework */,
 				22960A7B173A380A74CBB32E /* Pods_FormulaAPI_Unit_Tests.framework */,
 			);
@@ -252,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034E3218217BA774004B6EA3 /* mockResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +323,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FormulaAPI Unit Tests/Pods-FormulaAPI Unit Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
@@ -320,6 +333,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
@@ -352,7 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EE2E7F217752E200E73F23 /* FormulaAPI_Unit_Tests.swift in Sources */,
+				039B03C8217CD90500DB0364 /* DriversTests.swift in Sources */,
+				039B03CA217CDACB00DB0364 /* ConstructorsTests.swift in Sources */,
+				039B03CC217CDCD600DB0364 /* CircuitsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
