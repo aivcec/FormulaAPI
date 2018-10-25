@@ -4,7 +4,7 @@ A simple Swift framework that enables fetching of yearly Formula 1 and Formula E
 
 Using the framework you can obtain basic information about drivers, their team constructors and the circuits they were driving on.
 
-The data is retrieved using the Ergast Developer API.
+The data is retrieved using the [Ergast Developer API](http://ergast.com/mrd/).
 
 ## Instalation
 
