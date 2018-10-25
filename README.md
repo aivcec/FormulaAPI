@@ -16,7 +16,7 @@ To use this framework in your project through CocoaPods, add this to your podfil
 pod 'FormulaAPI', :git => 'https://github.com/aivcec/FormulaAPI.git'
 ```
 
-If you want to develop this pod alongside your main project (add it to development pods) you need to clone this repo and put this in your project podfile.
+If you want to develop this pod alongside your main project (add it to development pods) you need to clone this repo and put this in your project podfile:
 
 ```bash
 pod 'FormulaAPI', :path => '../FormulaAPI'
